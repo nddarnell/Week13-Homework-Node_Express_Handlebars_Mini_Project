@@ -1,0 +1,25 @@
+{
+  "name": "week13-homework-node_express_handlebars_mini_project",
+  "version": "1.0.0",
+  "description": "application created using node.js, heroku, handlebars, and mysql database",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nddarnell/Week13-Homework-Node_Express_Handlebars_Mini_Project.git"
+  },
+  "author": "Nathan Darnell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nddarnell/Week13-Homework-Node_Express_Handlebars_Mini_Project/issues"
+  },
+  "homepage": "https://github.com/nddarnell/Week13-Homework-Node_Express_Handlebars_Mini_Project#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1"
+  }
+}
