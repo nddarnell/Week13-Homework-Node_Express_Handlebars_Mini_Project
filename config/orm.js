@@ -44,7 +44,7 @@ const objToSql = ob => {
 
 // Object for all our SQL statement functions.
 const orm = {
-  all: async (tableInput) => {
+  selectFunc: async (tableInput) => {
     const queryString = `SELECT * FROM ${tableInput}`;
 
     const result = await connection.query(queryString);
@@ -52,7 +52,7 @@ const orm = {
     return result;
   },
 
-  create: async (table, cols, vals) => {
+  insertFunc: async (table, cols, vals) => {
     let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)})`;
 
     console.log(queryString);
@@ -62,18 +62,10 @@ const orm = {
     return result;
   },
   // An example of objColVals would be {name: panther, sleepy: true}
-  update: async (table, objColVals, condition) => {
+  updateFunc: async (table, objColVals, condition) => {
     let queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`;
 
     console.log(queryString);
-    const result = await connection.query(queryString);
-
-    return result;
-  },
-
-  delete: async (table, condition) => {
-    let queryString = `DELETE FROM ${table} WHERE ${condition}`;
-
     const result = await connection.query(queryString);
 
     return result;

@@ -48,24 +48,24 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### App Setup
 
-1. Create a GitHub repo called `burger` and clone it to your computer.
+1. Create a GitHub repo called `burger` and clone it to your computer. Done
 
-2. Make a package.json file by running `npm init` from the command line.
+2. Make a package.json file by running `npm init` from the command line. Done
 
-3. Install the Express npm package: `npm install express`.
+3. Install the Express npm package: `npm install express`. Done
 
-4. Create a server.js file.
+4. Create a server.js file. Done
 
-5. Install the Handlebars npm package: `npm install express-handlebars`.
+5. Install the Handlebars npm package: `npm install express-handlebars`. Done
 
-6. Install MySQL npm package: `npm install mysql`.
+6. Install MySQL npm package: `npm install mysql`. Done
 
 7. Require the following npm packages inside of the server.js file:
-   * express
+   * express Done
 
 #### DB Setup
 
-1. Inside your `burger` directory, create a folder named `db`.
+1. Inside your `burger` directory, create a folder named `db`. Done
 
 2. In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
 
@@ -76,43 +76,48 @@ Having an active and healthy commit history on GitHub is important for your futu
      * **burger_name**: a string.
      * **devoured**: a boolean.
 
+     Done 
+
 3. Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
 
-4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
+   Done
 
+4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
+   Done
 5. Now you're going to run these SQL files.
 
    * Make sure you're in the `db` folder of your app.
-
+      Done
    * Start MySQL command line tool and login: `mysql -u root -p`.
-
+      Done
    * With the `mysql>` command line tool running, enter the command `source schema.sql`. This will run your schema file and all of the queries in it -- in other words, you'll be creating your database.
-
+      Done
    * Now insert the entries you defined in `seeds.sql` by running the file: `source seeds.sql`.
-
+      Done
    * Close out of the MySQL command line tool: `exit`.
+      Done
 
 #### Config Setup
 
-1. Inside your `burger` directory, create a folder named `config`.
+1. Inside your `burger` directory, create a folder named `config`. Done
 
-2. Create a `connection.js` file inside `config` directory.
+2. Create a `connection.js` file inside `config` directory. Done
 
-   * Inside the `connection.js` file, setup the code to connect Node to MySQL.
+   * Inside the `connection.js` file, setup the code to connect Node to MySQL. Done
 
-   * Export the connection.
+   * Export the connection. Done
 
-3. Create an `orm.js` file inside `config` directory.
+3. Create an `orm.js` file inside `config` directory. Done
 
-   * Import (require) `connection.js` into `orm.js`
+   * Import (require) `connection.js` into `orm.js` Done
 
    * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 
-     * `selectAll()`
-     * `insertOne()`
-     * `updateOne()`
+     * `selectAll()` selectFunc
+     * `insertOne()` insertFunc
+     * `updateOne()` updateFunc
 
-   * Export the ORM object in `module.exports`.
+   * Export the ORM object in `module.exports`. Done
 
 #### Model setup
 
