@@ -121,40 +121,40 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### Model setup
 
-* Inside your `burger` directory, create a folder named `models`.
+* Inside your `burger` directory, create a folder named `models`. Done
 
-  * In `models`, make a `burger.js` file.
+  * In `models`, make a `burger.js` file. Done
 
-    * Inside `burger.js`, import `orm.js` into `burger.js`
+    * Inside `burger.js`, import `orm.js` into `burger.js` Done
 
-    * Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
+    * Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM. Done
 
-    * Export at the end of the `burger.js` file.
+    * Export at the end of the `burger.js` file. Done
 
 #### Controller setup
 
-1. Inside your `burger` directory, create a folder named `controllers`.
+1. Inside your `burger` directory, create a folder named `controllers`. Done
 
-2. In `controllers`, create the `burgers_controller.js` file.
+2. In `controllers`, create the `burgers_controller.js` file. Done
 
-3. Inside the `burgers_controller.js` file, import the following:
+3. Inside the `burgers_controller.js` file, import the following: Done
 
-   * Express
-   * `burger.js`
+   * Express Done
+   * `burger.js` Done
 
-4. Create the `router` for the app, and export the `router` at the end of your file.
+4. Create the `router` for the app, and export the `router` at the end of your file. Done
 
 #### View setup
 
-1. Inside your `burger` directory, create a folder named `views`.
+1. Inside your `burger` directory, create a folder named `views`. Done
 
-   * Create the `index.handlebars` file inside `views` directory.
+   * Create the `index.handlebars` file inside `views` directory. Done
 
-   * Create the `layouts` directory inside `views` directory.
+   * Create the `layouts` directory inside `views` directory. Done
 
-     * Create the `main.handlebars` file inside `layouts` directory.
+     * Create the `main.handlebars` file inside `layouts` directory. Done
 
-     * Setup the `main.handlebars` file so it's able to be used by Handlebars.
+     * Setup the `main.handlebars` file so it's able to be used by Handlebars. Done
 
      * Setup the `index.handlebars` to have the template that Handlebars can render onto.
 
