@@ -1,5 +1,3 @@
-// connection to database goes here
-// export connection see activity 16
 const mysql = require("mysql");
 const util = require("util");
 

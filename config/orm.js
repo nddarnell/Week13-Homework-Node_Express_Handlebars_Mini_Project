@@ -1,7 +1,3 @@
-// normally would already be created
-// import connection
-// orm speaks to the database content here see activity 16
-// import connection here
 const connection = require("./connection.js");
 
 // Helper function for SQL syntax.
