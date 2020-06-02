@@ -8,7 +8,6 @@ const connection = mysql.createConnection({
     password: "SummerFalls13",
     database: "burgers_db"
 });
-
 connection.connect(function (error) {
     if (error) {
         throw error;
@@ -16,7 +15,6 @@ connection.connect(function (error) {
 
     console.log(`Connected to database as id ${connection.threadId}`);
 });
-
 connection.query = util.promisify(connection.query);
 
 module.exports = connection;

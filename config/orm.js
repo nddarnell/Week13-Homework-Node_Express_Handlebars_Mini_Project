@@ -5,6 +5,7 @@ const connection = require("./connection.js");
 // In order to write the query, we need 3 question marks.
 // The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
 // ["?", "?", "?"].toString() => "?,?,?";
+// provided by instructor
 const printQuestionMarks = num => {
   const arr = [];
 
@@ -38,35 +39,25 @@ const objToSql = ob => {
   return arr.toString();
 }
 
-// Object for all our SQL statement functions.
 const orm = {
   selectFunc: async (tableInput) => {
     const queryString = `SELECT * FROM ${tableInput}`;
-
     const result = await connection.query(queryString);
 
     return result;
   },
-
   insertFunc: async (table, cols, vals) => {
     let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)})`;
-
-    console.log(queryString);
-
     const result = await connection.query(queryString, vals);
 
     return result;
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
   updateFunc: async (table, objColVals, condition) => {
     let queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`;
-
-    console.log(queryString);
     const result = await connection.query(queryString);
 
     return result;
   }
 };
 
-// Export the orm object for the model (cat.js).
 module.exports = orm;
