@@ -6,8 +6,14 @@ const burger = require("../models/burger");
 router.get("/", async (req, res) => {
   const data = await burger.all();
 
-  res.render("index", { burger_name: data });
+  res.render("index", { burgers: data });
 });
+
+router.get("/api/burger", async (req, res)=>{
+  const data = await burger.all();
+
+  res.json(data);
+})
 
 router.post("/api/burgers", async (req, res) => {
   const data = await burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured]);
